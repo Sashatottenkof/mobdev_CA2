@@ -49,6 +49,10 @@ const routes: Routes = [
                     {
                         path: '',
                         loadChildren: () => import('../quotes/quotes.module').then(m => m.QuotesPageModule)
+                    },
+                    {
+                        path: 'quotesDetails',
+                        loadChildren: () => import('../quotes-details/quotes-details-routing.module').then(m => m.QuotesDetailsPageRoutingModule)
                     }
                 ]
             }
