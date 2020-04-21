@@ -16,7 +16,7 @@ const routes: Routes = [
                         loadChildren: () => import('../characters/characters.module').then(m => m.CharactersPageModule)
                     },
                     {
-                        path: 'character-details',
+                        path: ':id',
                         loadChildren: () => import('../character-details/character-details.module').then(m => m.CharacterDetailsPageModule)
                     }
                 ]
@@ -38,7 +38,7 @@ const routes: Routes = [
                         loadChildren: () => import('../episodes/episodes.module').then(m => m.EpisodesPageModule)
                     },
                     {
-                        path: 'episode-details',
+                        path: ':id',
                         loadChildren: () => import('../episode-details/episode-details.module').then(m => m.EpisodeDetailsPageModule)
                     }
                 ]
@@ -51,7 +51,7 @@ const routes: Routes = [
                         loadChildren: () => import('../quotes/quotes.module').then(m => m.QuotesPageModule)
                     },
                     {
-                        path: 'quotesDetails',
+                        path: ':id',
                         loadChildren: () => import('../quotes-details/quotes-details-routing.module').then(m => m.QuotesDetailsPageRoutingModule)
                     }
                 ]

@@ -1,26 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+	
+import { Observable } from 'rxjs';
+
+import { ApiService } from '../../services/api.service';
 @Component({
     selector: 'app-characters',
     templateUrl: './characters.page.html',
     styleUrls: ['./characters.page.scss'],
 })
 export class CharactersPage implements OnInit {
-
-    constructor(private navController: NavController, private router: Router) { }
+    characters: Observable<any>;
+    constructor(private router: Router, private api: ApiService) { }
 
     ngOnInit() {
+        this.characters = this.api.getCharacters();
     }
-    openDetails() {
-        // Both of these would work!
-        // But the standard Router is recommended.
-        // this.navController.navigateForward(`/tabs/films/42`);
-        this.router.navigateByUrl(`tabs/characters/character-details`);
+    openDetails(character) {
+
+        let char_id = character.char_id;
+        
+        this.router.navigateByUrl(`tabs/characters/${char_id}`);
     }
 
-    goToPlanets() {
-        this.navController.navigateRoot(`/tabs/planets`)
-    }
+    
 
 }
