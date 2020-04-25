@@ -4,6 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+<ion-list>
+    <ion-item button detail lines="inset" *ngFor="let count of counts | async" (click)="openDetails(deathcount)">
+      {{count.deathcount}}
+    </ion-item>
+  </ion-list>
+ 
 </ion-content>
