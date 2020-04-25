@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
-	
+import { Router } from '@angular/router';	
 import { Observable } from 'rxjs';
-
 import { ApiService } from '../../services/api.service';
+
 @Component({
     selector: 'app-characters',
     templateUrl: './characters.page.html',
@@ -19,9 +17,9 @@ export class CharactersPage implements OnInit {
     }
     openDetails(character) {
 
-        let char_id = character.char_id;
+        let charId = character.char_id;
         
-        this.router.navigateByUrl(`tabs/characters/${char_id}`);
+        this.router.navigateByUrl('/tabs/characters/${charId}');
     }
 
     
