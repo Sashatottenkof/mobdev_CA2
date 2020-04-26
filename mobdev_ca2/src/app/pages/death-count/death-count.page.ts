@@ -19,6 +19,6 @@ export class DeathCountPage implements OnInit {
 
     //     let countId = count.count_id;
         
-    //     this.router.navigateByUrl('/tabs/death-count/$countId}');
+    //     this.router.navigateByUrl(`/tabs/death-count/${countId}`);
     // }
 }

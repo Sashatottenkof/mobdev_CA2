@@ -19,7 +19,7 @@ export class CharactersPage implements OnInit {
 
         let charId = character.char_id;
         
-        this.router.navigateByUrl('/tabs/characters/${charId}');
+        this.router.navigateByUrl(`/tabs/characters/${charId}`);
     }
 
     

@@ -52,7 +52,7 @@ const routes: Routes = [
                     },
                     {
                         path: ':id',
-                        loadChildren: () => import('../quotes-details/quotes-details-routing.module').then(m => m.QuotesDetailsPageRoutingModule)
+                        loadChildren: () => import('../quotes-details/quotes-details.module').then(m => m.QuotesDetailsPageModule)
                     }
                 ]
             }
