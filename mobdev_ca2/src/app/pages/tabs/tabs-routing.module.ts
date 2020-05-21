@@ -55,7 +55,17 @@ const routes: Routes = [
                         loadChildren: () => import('../quotes-details/quotes-details.module').then(m => m.QuotesDetailsPageModule)
                     }
                 ]
+            },
+             {
+                path: 'camera',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () => import('../camera/camera.module').then(m => m.CameraPageModule)
+                    }
+                ]
             }
+
 
         ]
     },
