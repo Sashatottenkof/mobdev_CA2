@@ -1,7 +1,0 @@
-{
-  "name": "mobdev_ca2",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
